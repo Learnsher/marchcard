@@ -1,6 +1,10 @@
 # 🎴 MarchCard - 高級刮刮卡體驗
 
+[![Deploy to GitHub Pages](https://github.com/Learnsher/marchcard/actions/workflows/deploy.yml/badge.svg)](https://github.com/Learnsher/marchcard/actions/workflows/deploy.yml)
+
 一個使用 React 18 + TypeScript + Three.js 打造的高級刮刮卡互動體驗應用。
+
+🌐 **[查看線上 Demo](https://learnsher.github.io/marchcard/)**
 
 ## ✨ 特色功能
 
@@ -55,12 +59,23 @@ npm run preview
 
 ## 📦 部署到 GitHub Pages
 
-### 方法 1: 使用 GitHub Actions（推薦）
+此項目已配置自動部署到 GitHub Pages。查看部署狀態：[![Deploy Status](https://github.com/Learnsher/marchcard/actions/workflows/deploy.yml/badge.svg)](https://github.com/Learnsher/marchcard/actions/workflows/deploy.yml)
 
-1. 在 GitHub 倉庫設定中啟用 GitHub Pages
-2. 將 Source 設定為 "GitHub Actions"
-3. 推送到 `main` 分支會自動觸發部署
-4. 部署完成後，應用將在 `https://[your-username].github.io/marchcard/` 可用
+### 自動部署（已配置）
+
+部署工作流程已設定完成，每次推送到 `main` 分支時會自動觸發：
+
+1. **確認 GitHub Pages 設定**：
+   - 前往倉庫的 Settings > Pages
+   - Build and deployment > Source 選擇 "GitHub Actions"
+   
+2. **觸發部署**：
+   - 推送代碼到 `main` 分支
+   - 或在 Actions 標籤中手動運行 "Deploy to GitHub Pages" 工作流程
+
+3. **查看部署狀態**：
+   - 訪問 [Actions](https://github.com/Learnsher/marchcard/actions) 頁面查看部署進度
+   - 部署完成後，應用將在 https://learnsher.github.io/marchcard/ 可用
 
 ### 方法 2: 手動部署
 
