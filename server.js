@@ -1,12 +1,11 @@
 import express from 'express';
-import type { Request, Response } from 'express';
 
 const app = express();
 app.use(express.json());
 
 const PRIZES = ['一等獎：iPhone 15 Pro', '二等獎：AirPods Pro', '三等獎：$500 現金券'];
 
-app.post('/api/start', (_req: Request, res: Response) => {
+app.post('/api/start', (_req, res) => {
   const cardId = `CARD-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const expiresAt = Date.now() + 15 * 60 * 1000; // 15 minutes from now
   
@@ -19,7 +18,7 @@ app.post('/api/start', (_req: Request, res: Response) => {
   });
 });
 
-app.post('/api/reveal', (req: Request, res: Response) => {
+app.post('/api/reveal', (req, res) => {
   const { cardId } = req.body;
   
   if (!cardId) {
@@ -41,7 +40,7 @@ app.post('/api/reveal', (req: Request, res: Response) => {
   });
 });
 
-app.post('/api/redeem', (req: Request, res: Response) => {
+app.post('/api/redeem', (req, res) => {
   const { cardId } = req.body;
   
   if (!cardId) {
